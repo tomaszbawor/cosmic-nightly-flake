@@ -147,7 +147,7 @@
             {
               pkgName,
               flakeInput,
-              pkgHash ? "",
+              pkgHash ? null,
               extraBuildInputs ? [ ],
               extraNativeBuildInputs ? [ ],
               patches ? null,
@@ -273,7 +273,6 @@
           cosmic-protocols = mkCosmicOverride {
             pkgName = "cosmic-protocols";
             flakeInput = inputs.cosmic-protocols-src;
-            pkgHash = "";
           };
           cosmic-randr = mkCosmicOverride {
             pkgName = "cosmic-randr";
@@ -304,7 +303,6 @@
           cosmic-store = mkCosmicOverride {
             pkgName = "cosmic-store";
             flakeInput = inputs.cosmic-store-src;
-            pkgHash = "";
           };
           cosmic-term = mkCosmicOverride {
             pkgName = "cosmic-term";
@@ -313,12 +311,10 @@
           cosmic-text = mkCosmicOverride {
             pkgName = "cosmic-text";
             flakeInput = inputs.cosmic-text-src;
-            pkgHash = "";
           };
           cosmic-theme-editor = mkCosmicOverride {
             pkgName = "cosmic-theme-editor";
             flakeInput = inputs.cosmic-theme-editor-src;
-            pkgHash = "";
           };
           cosmic-wallpapers = mkCosmicFetchOverride {
             pkgName = "cosmic-wallpapers";
@@ -332,7 +328,6 @@
           libcosmic = mkCosmicOverride {
             pkgName = "libcosmic";
             flakeInput = inputs.libcosmic-src;
-            pkgHash = "";
           };
           xdg-desktop-portal-cosmic = mkCosmicOverride {
             pkgName = "xdg-desktop-portal-cosmic";
