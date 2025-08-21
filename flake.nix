@@ -217,7 +217,7 @@
           cosmic-comp = mkCosmicOverride {
             pkgName = "cosmic-comp";
             flakeInput = inputs.cosmic-comp-src;
-            pkgHash = "sha256-XyiPpYVqk9y1V+0R0zIHXxLuao8qS8o8ZGTqp8+32PE=";
+            pkgHash = "sha256-6IV1qjLTBs6L+yntIEhWT4xcb8slae/6F3WTRP8fDtU=";
           };
           cosmic-edit = mkCosmicOverride {
             pkgName = "cosmic-edit";
