@@ -203,6 +203,7 @@
             extraEnv = {
               LIBCLANG_PATH = "${pkgs.llvmPackages.libclang.lib}/lib";
             };
+            patches = [ ];
           };
           cosmic-applibrary = mkCosmicOverride {
             pkgName = "cosmic-applibrary";
