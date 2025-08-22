@@ -32,11 +32,7 @@ In your system's `flake.nix` (e.g., in `/etc/nixos/flake.nix`), you need to perf
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     # Add the COSMIC nightly flake
-    cosmic-nightly = {
-      url = "github:busyboredom/cosmic-nightly-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
+    cosmic-nightly.url = "github:busyboredom/cosmic-nightly-flake";
   };
 
   outputs = { self, nixpkgs, cosmic-nightly, ... }@inputs: {
@@ -45,7 +41,7 @@ In your system's `flake.nix` (e.g., in `/etc/nixos/flake.nix`), you need to perf
       specialArgs = { inherit inputs; };
       modules = [
         # Apply the overlay here
-        ({ config, pkgs, ... }: {
+        ({
           nixpkgs.overlays = [ cosmic-nightly.overlay ];
         })
 
