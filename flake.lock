@@ -51,11 +51,11 @@
     "cosmic-comp-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1755788989,
-        "narHash": "sha256-1+c9dTvSSAhm5kBqvtRjt1wdfos9ce0ASM32BRhFg64=",
+        "lastModified": 1755856687,
+        "narHash": "sha256-/FFU6gLsTwA2Owltz1UfAP8GkAbZKGbVboHlmUlGyO4=",
         "owner": "pop-os",
         "repo": "cosmic-comp",
-        "rev": "f2813f0500c6af8cb1fd804c520d181607c17938",
+        "rev": "e54f4b4963294cf11891dc3c8bf983d39d1aedf8",
         "type": "github"
       },
       "original": {
