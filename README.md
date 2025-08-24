@@ -42,7 +42,7 @@ In your system's `flake.nix` (e.g., in `/etc/nixos/flake.nix`), you need to perf
       modules = [
         # Apply the overlay here
         ({
-          nixpkgs.overlays = [ cosmic-nightly.overlay ];
+          nixpkgs.overlays = [ cosmic-nightly.overlays.default ];
         })
 
         ./configuration.nix
