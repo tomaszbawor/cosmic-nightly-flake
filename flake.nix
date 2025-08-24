@@ -93,24 +93,12 @@
       url = "github:pop-os/cosmic-term";
       flake = false;
     };
-    cosmic-text-src = {
-      url = "github:pop-os/cosmic-text";
-      flake = false;
-    };
-    cosmic-theme-editor-src = {
-      url = "github:pop-os/cosmic-theme-editor";
-      flake = false;
-    };
     cosmic-wallpapers-src = {
       url = "github:pop-os/cosmic-wallpapers";
       flake = false;
     };
     cosmic-workspaces-epoch-src = {
       url = "github:pop-os/cosmic-workspaces-epoch";
-      flake = false;
-    };
-    libcosmic-src = {
-      url = "github:pop-os/libcosmic";
       flake = false;
     };
     xdg-desktop-portal-cosmic-src = {
@@ -308,14 +296,6 @@
             pkgName = "cosmic-term";
             flakeInput = inputs.cosmic-term-src;
           };
-          cosmic-text = mkCosmicOverride {
-            pkgName = "cosmic-text";
-            flakeInput = inputs.cosmic-text-src;
-          };
-          cosmic-theme-editor = mkCosmicOverride {
-            pkgName = "cosmic-theme-editor";
-            flakeInput = inputs.cosmic-theme-editor-src;
-          };
           cosmic-wallpapers = mkCosmicFetchOverride {
             pkgName = "cosmic-wallpapers";
             flakeInput = inputs.cosmic-wallpapers-src;
@@ -324,10 +304,6 @@
             pkgName = "cosmic-workspaces-epoch";
             flakeInput = inputs.cosmic-workspaces-epoch-src;
             pkgHash = "sha256-wFX5EReAnZ7ymXYfMfiZU1MeUUCcOKEkWdSeyGHEuKg=";
-          };
-          libcosmic = mkCosmicOverride {
-            pkgName = "libcosmic";
-            flakeInput = inputs.libcosmic-src;
           };
           xdg-desktop-portal-cosmic = mkCosmicOverride {
             pkgName = "xdg-desktop-portal-cosmic";

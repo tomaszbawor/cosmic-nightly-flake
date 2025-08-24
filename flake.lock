@@ -352,38 +352,6 @@
         "type": "github"
       }
     },
-    "cosmic-text-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1754943420,
-        "narHash": "sha256-ux1d3CAaziXkqMDfgH+mUHE2iDbhFs1yhMxHsN8Ccc4=",
-        "owner": "pop-os",
-        "repo": "cosmic-text",
-        "rev": "f7033bb0433f6a9ba109007027781ba46ea9ba27",
-        "type": "github"
-      },
-      "original": {
-        "owner": "pop-os",
-        "repo": "cosmic-text",
-        "type": "github"
-      }
-    },
-    "cosmic-theme-editor-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1677780465,
-        "narHash": "sha256-DGcb+FZ7GkxK15sjeacvD1MS89I3RN43ohii2k+r8KM=",
-        "owner": "pop-os",
-        "repo": "cosmic-theme-editor",
-        "rev": "024bd9b3e49685a0083d744bf823072b58cc4957",
-        "type": "github"
-      },
-      "original": {
-        "owner": "pop-os",
-        "repo": "cosmic-theme-editor",
-        "type": "github"
-      }
-    },
     "cosmic-wallpapers-src": {
       "flake": false,
       "locked": {
@@ -413,22 +381,6 @@
       "original": {
         "owner": "pop-os",
         "repo": "cosmic-workspaces-epoch",
-        "type": "github"
-      }
-    },
-    "libcosmic-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1755795096,
-        "narHash": "sha256-DqwfWdpA1r7Wc30e3HQeb0pxh6bNNy/8gV737yhgCFY=",
-        "owner": "pop-os",
-        "repo": "libcosmic",
-        "rev": "8415d77b0aa4035a7c21189d350b23f5203559b2",
-        "type": "github"
-      },
-      "original": {
-        "owner": "pop-os",
-        "repo": "libcosmic",
         "type": "github"
       }
     },
@@ -472,11 +424,8 @@
         "cosmic-settings-src": "cosmic-settings-src",
         "cosmic-store-src": "cosmic-store-src",
         "cosmic-term-src": "cosmic-term-src",
-        "cosmic-text-src": "cosmic-text-src",
-        "cosmic-theme-editor-src": "cosmic-theme-editor-src",
         "cosmic-wallpapers-src": "cosmic-wallpapers-src",
         "cosmic-workspaces-epoch-src": "cosmic-workspaces-epoch-src",
-        "libcosmic-src": "libcosmic-src",
         "nixpkgs": "nixpkgs",
         "xdg-desktop-portal-cosmic-src": "xdg-desktop-portal-cosmic-src"
       }
