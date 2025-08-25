@@ -146,10 +146,12 @@
               # with the fetched source from the dedicated flake input.
               src = flakeInput;
 
-              env = {
-                VERGEN_GIT_SHA = flakeInput.rev;
-              }
-              // extraEnv;
+              env =
+                (oldAttrs.env or { })
+                // {
+                  VERGEN_GIT_SHA = flakeInput.rev;
+                }
+                // extraEnv;
 
               cargoHash = pkgHash;
               buildInputs = (oldAttrs.buildInputs or [ ]) ++ extraBuildInputs;
