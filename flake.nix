@@ -182,7 +182,7 @@
         cosmic-applets = mkCosmicOverride {
           pkgName = "cosmic-applets";
           flakeInput = inputs.cosmic-applets-src;
-          pkgHash = "sha256-v4hlNZXmaX3kipbhFRo1gG7BjUIeumv1F0Z/8CYoSyc=";
+          pkgHash = "sha256-lL1nab0EuDbfcz9d8EBRKrGprDGGedXci+J6fNGqy8w=";
           extraBuildInputs = [
             pkgs.pipewire
             pkgs.llvmPackages.libclang
@@ -206,7 +206,7 @@
         cosmic-comp = mkCosmicOverride {
           pkgName = "cosmic-comp";
           flakeInput = inputs.cosmic-comp-src;
-          pkgHash = "sha256-6IV1qjLTBs6L+yntIEhWT4xcb8slae/6F3WTRP8fDtU=";
+          pkgHash = "sha256-wGq7Cdq56Hnzww+IVXCtZet4Zojj8VUmmsjsg53XHe8=";
         };
         cosmic-edit = mkCosmicOverride {
           pkgName = "cosmic-edit";
