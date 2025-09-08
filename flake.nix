@@ -137,6 +137,7 @@
             extraBuildInputs ? [ ],
             extraNativeBuildInputs ? [ ],
             patches ? null,
+            postPatch ? null,
             extraEnv ? { },
           }:
           prev.${pkgName}.overrideAttrs (
@@ -165,6 +166,7 @@
               version = "git-${builtins.substring 0 8 flakeInput.rev}";
             }
             // lib.optionalAttrs (patches != null) { inherit patches; }
+            // lib.optionalAttrs (postPatch != null) { inherit postPatch; }
           );
 
         mkCosmicFetchOverride =
@@ -182,7 +184,7 @@
         cosmic-applets = mkCosmicOverride {
           pkgName = "cosmic-applets";
           flakeInput = inputs.cosmic-applets-src;
-          pkgHash = "sha256-lL1nab0EuDbfcz9d8EBRKrGprDGGedXci+J6fNGqy8w=";
+          pkgHash = "sha256-KfsUAwte+U6hsXZS0N1Ywjw4sUpq0wkR9/nTalmv44c=";
           extraBuildInputs = [
             pkgs.pipewire
             pkgs.llvmPackages.libclang
@@ -201,7 +203,7 @@
         cosmic-bg = mkCosmicOverride {
           pkgName = "cosmic-bg";
           flakeInput = inputs.cosmic-bg-src;
-          pkgHash = "sha256-iCQjPZH3CN73R6PmFRndLcPZGQfxeaPSYPZgbGofKkM=";
+          pkgHash = "sha256-+NkraWjWHIMIyktAUlp3q2Ot1ib1QRsBBvfdbr5BXto=";
         };
         cosmic-comp = mkCosmicOverride {
           pkgName = "cosmic-comp";
@@ -223,7 +225,7 @@
         cosmic-greeter = mkCosmicOverride {
           pkgName = "cosmic-greeter";
           flakeInput = inputs.cosmic-greeter-src;
-          pkgHash = "sha256-X/tSofi4aNtA5MeWCy03Tnnz3AxIF8MCZ7ofeMSWNCc=";
+          pkgHash = "sha256-J0Yj9povzqRVSdyRYp5wOyyDxP7GQP6QQ46mckuNNwU=";
         };
         cosmic-icons = mkCosmicFetchOverride {
           pkgName = "cosmic-icons";
@@ -247,12 +249,21 @@
         cosmic-osd = mkCosmicOverride {
           pkgName = "cosmic-osd";
           flakeInput = inputs.cosmic-osd-src;
-          pkgHash = "sha256-C+R2XgWtErznv6TQZ9eke9/ZNiRUVparP5yHu9442wA=";
+          pkgHash = "sha256-qiQ4VV1ML2EpfxEdE/A8b6mhtnr5y1/Dr9BvtFu0zgg=";
+          extraBuildInputs = [
+            pkgs.pipewire
+            pkgs.llvmPackages.libclang
+          ];
+          extraNativeBuildInputs = [ pkgs.rustPlatform.bindgenHook ];
+          extraEnv = {
+            LIBCLANG_PATH = "${pkgs.llvmPackages.libclang.lib}/lib";
+          };
+          postPatch = "";
         };
         cosmic-panel = mkCosmicOverride {
           pkgName = "cosmic-panel";
           flakeInput = inputs.cosmic-panel-src;
-          pkgHash = "sha256-VlEbbQTAX05zJYURZym4bBhCtbQ85ujvqLMQNHSz23o=";
+          pkgHash = "sha256-m9tWSJ/77uD29k6FFxLNtyZCkR32LHy5lzCAEPH5uXw=";
         };
         cosmic-player = mkCosmicOverride {
           pkgName = "cosmic-player";
@@ -276,17 +287,17 @@
         cosmic-session = mkCosmicOverride {
           pkgName = "cosmic-session";
           flakeInput = inputs.cosmic-session-src;
-          pkgHash = "sha256-4leO8F32O4E+fqpR0/Nj5wBcY0N00J/JdsYnPwPCWps=";
+          pkgHash = "sha256-bo46A7hS1U0cOsa/T4oMTKUTjxVCaGuFdN2qCjVHxhg=";
         };
         cosmic-settings = mkCosmicOverride {
           pkgName = "cosmic-settings";
           flakeInput = inputs.cosmic-settings-src;
-          pkgHash = "sha256-wMkED3KyVy9gDpYDNLtPIn2IDA1U0tKBxKvz86VAH94=";
+          pkgHash = "sha256-+d9c2VdJ+DT2H4zfV9znPlb1ZQZmh382Q/VTpjaT9ys=";
         };
         cosmic-settings-daemon = mkCosmicOverride {
           pkgName = "cosmic-settings-daemon";
           flakeInput = inputs.cosmic-settings-daemon-src;
-          pkgHash = "sha256-9BeC0Y29NOMoEJHKLV3aRHZQbglbLnnTH4uS3h129iw=";
+          pkgHash = "sha256-TqDuBmmFL3JIJQPCbZ0eN9Fr8gqt2bbpMPvGFwkH2/s=";
           extraBuildInputs = [ pkgs.openssl ];
         };
         cosmic-store = mkCosmicOverride {
