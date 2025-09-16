@@ -213,19 +213,19 @@
         cosmic-edit = mkCosmicOverride {
           pkgName = "cosmic-edit";
           flakeInput = inputs.cosmic-edit-src;
-          pkgHash = "sha256-0pmENYRK9gt3Zytc0/2XX0NFLe0EbC2JBwCWOJEFj8k=";
+          pkgHash = "sha256-YfD06RAQPZRwapd0fhNsZ0tx+0JMNDXiPJIWwDhmG0M=";
           extraBuildInputs = [ pkgs.glib ];
           extraNativeBuildInputs = [ git-wrapper ];
         };
         cosmic-files = mkCosmicOverride {
           pkgName = "cosmic-files";
           flakeInput = inputs.cosmic-files-src;
-          pkgHash = "sha256-L49AOj9Z4DLxzGu0Z8sRw7tXLBQqZzo855KSi5pzLqY=";
+          pkgHash = "sha256-7RANj+aXdmBVO66QDgcNrrU4qEGK4Py4+ZctYWU1OO8=";
         };
         cosmic-greeter = mkCosmicOverride {
           pkgName = "cosmic-greeter";
           flakeInput = inputs.cosmic-greeter-src;
-          pkgHash = "sha256-42In98f6wLkv5rEow6ASditwfnowVTTkvR8kL7c8Dss=";
+          pkgHash = "sha256-ElIy18uwkSYQEmc1AAmETBHRIzQNQaNcLQfRLIMwTl0=";
         };
         cosmic-icons = mkCosmicFetchOverride {
           pkgName = "cosmic-icons";
@@ -282,7 +282,7 @@
         cosmic-screenshot = mkCosmicOverride {
           pkgName = "cosmic-screenshot";
           flakeInput = inputs.cosmic-screenshot-src;
-          pkgHash = "sha256-IqduoFFTAwJuUNSJ3t67CnkpGurRLEdZwv0Cc6QoFNk=";
+          pkgHash = "sha256-O8fFeg1TkKCg+QbTnNjsH52xln4+ophh/BW/b4zQs9o=";
         };
         cosmic-session = mkCosmicOverride {
           pkgName = "cosmic-session";
@@ -292,7 +292,7 @@
         cosmic-settings = mkCosmicOverride {
           pkgName = "cosmic-settings";
           flakeInput = inputs.cosmic-settings-src;
-          pkgHash = "sha256-LejpYDXP9mXy6jYSREpBDthZqgwN/Chg4BS1emKZUvA=";
+          pkgHash = "sha256-7+xXZ3mLfYtEK5Ufan+hoMN+kQsHg3W1hgIlvaN//h4=";
         };
         cosmic-settings-daemon = mkCosmicOverride {
           pkgName = "cosmic-settings-daemon";
