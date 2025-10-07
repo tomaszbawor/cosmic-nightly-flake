@@ -309,7 +309,7 @@
         cosmic-term = mkCosmicOverride {
           pkgName = "cosmic-term";
           flakeInput = inputs.cosmic-term-src;
-          pkgHash = "sha256-wmXQPmSQQLaTOuUFw/qfOafWfbHWNY9KWavk1NNLNjo=";
+          pkgHash = "sha256-2mOxKbM6XkfT1zzUbLkCjj7zRHOd/1M696dj4C8QO88=";
         };
         cosmic-wallpapers = mkCosmicFetchOverride {
           pkgName = "cosmic-wallpapers";
